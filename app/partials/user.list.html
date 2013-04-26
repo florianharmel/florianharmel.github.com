@@ -1,0 +1,36 @@
+<div class="ng-scope" ng-class="animationClass">
+	<div class="content">
+		<section class="titleSection option">
+			<h1>Liste d'offres</h1>
+		</section>
+		<section class="liste">
+			<!--
+			<ul>
+				<li class="group">Nom du package RM 1</li>
+			</ul>
+			-->
+			<ul ng-class="{active:data.listActive}">
+				<li sf-virtual-repeat="offer in data.results" class="offer ng-scope">
+					<a href="#/app/userId/detail/list/detailOffer">
+						<div class="media">
+							
+							<img ng-src="{{offer.picture}}" width="55">
+						</div>
+						<div class="desc">
+							<h4 class="ng-binding">{{offer.name}} {{$index}}</h4>	
+							<p class="ng-binding">{{offer.desc}}</p>
+						</div>
+						<div class="price">
+							<span class="ng-binding">{{offer.price}}</span><span class="dec ng-binding">,{{offer.priceDec}}€</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section class="filtre">
+			<a ng-click="test()">Filtrer les offres et les produits</a>
+		</section>
+	</div>
+</div>
+
+<div ui-view class="userListDetail"></div>

@@ -1,0 +1,21 @@
+<div class="ng-scope">
+	<div class="content">
+		<section class=" titleSection recherche">
+			<h1>Rechercher un client</h1>
+		</section>
+		<form name="customerForm" class="ng-pristine ng-invalid ng-invalid-required">
+			<div class="formElm">
+				<span class="field">
+					
+					<input type="text" id="customerPhone" placeholder="Identifiant client" class="phoneNumber input-medium ng-pristine ng-invalid ng-invalid-required" required="" ng-model="customerPhone" ng-focus="comeBack()" />
+
+				</span>
+			</div>
+			<div class="formElm hideOnFound">
+				<input class="button" type="submit" value="Rechercher" ng-disabled="customerForm.$invalid" ng-click="searchUser(customerPhone)">
+			</div>
+		</form>
+	</div>
+</div>
+<div ui-view class="userDetail"></div>
+

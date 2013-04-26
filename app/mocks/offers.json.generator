@@ -1,0 +1,23 @@
+/*
+
+generate with :
+[
+    '{{repeat(1000)}}',
+    {
+        id: '{{index}}',
+        guid: '{{guid}}',
+        picture: 'http://robohash.org/{{numeric(0,10)}}.jpg',
+        name: function(idx) {
+            var arr = ['Offre 1', 'Offre 2', 'Offre 3'];
+            return arr.sort( function() { return 0.5 - Math.random() } )[0];
+        },
+        price: '{{numeric(10,300)}}',
+        priceDec: '{{numeric(10,90)}}',
+        desc: '{{lorem(2,4)}}'
+    }
+]
+
+url : http://www.json-generator.com/
+
+
+*/
